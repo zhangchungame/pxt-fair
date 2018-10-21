@@ -1,0 +1,11 @@
+{
+  "name": "fair",
+  "dependencies": {
+    "core": "*"
+  },
+  "description": "my test",
+  "files": [
+    "main.ts",
+    "README.md"
+  ]
+}
