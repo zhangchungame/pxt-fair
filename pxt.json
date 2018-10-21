@@ -5,7 +5,6 @@
   },
   "description": "my test",
   "files": [
-    "main.ts",
-    "README.md"
+    "main.ts"
   ]
 }
