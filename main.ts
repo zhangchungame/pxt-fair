@@ -16,12 +16,22 @@ namespace BH1750 {
         addr=1;
     }
 
-    //% blockId="BH1750_showzero" block="显示零"
-    //% weight=100 blockGap=8
-    export function showzero(){
-        pins.digitalWritePin(DigitalPin.P0, 1);
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        basic.showNumber(0);
+    export enum enLED1 {
+
+        //% blockId="OFF" block="灭"
+        OFF = 0,
+        //% blockId="ON" block="亮"
+        ON =1
+    }
+    //% blockId=BH1750_LED1 block="LED1|pin %pin|value %value"
+    //% weight=5
+    //% blockGap=8
+    //% color="#C814B8"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
+    export function LED1(pin: DigitalPin, value: enLED1): void {
+
+        pins.digitalWritePin(pin, value);
+
     }
 
 
