@@ -16,9 +16,9 @@ namespace BH1750 {
         addr=1
     }
 
-    //% blockId="showZero" block="显示零"
+    //% blockId="BH1750_showzero" block="显示零"
     //% weight=100 blockGap=8
-    export function showZero(){
+    export function showzero(){
 
     }
 
