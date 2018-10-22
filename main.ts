@@ -19,7 +19,7 @@ namespace BH1750 {
     //% blockId="BH1750_showzero" block="显示零"
     //% weight=100 blockGap=8
     export function showzero(){
-
+        basic.showNumber(0)
     }
 
 
