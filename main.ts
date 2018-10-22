@@ -19,8 +19,9 @@ namespace BH1750 {
     //% blockId="BH1750_showzero" block="显示零"
     //% weight=100 blockGap=8
     export function showzero(){
-        pins.digitalWritePin(DigitalPin.P0, 0);
-        // basic.showNumber(0);
+        pins.digitalWritePin(DigitalPin.P0, 1);
+        pins.digitalWritePin(DigitalPin.P1, 1);
+        basic.showNumber(0);
     }
 
 
