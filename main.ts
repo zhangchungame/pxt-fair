@@ -13,13 +13,14 @@ namespace BH1750 {
     //% blockId="BH1750_SET_ADDRESS" block="设置地址 %addr"
     //% weight=100 blockGap=8
     export function SetAddress(addr: number): void {
-        addr=1
+        addr=1;
     }
 
     //% blockId="BH1750_showzero" block="显示零"
     //% weight=100 blockGap=8
     export function showzero(){
-        basic.showNumber(0)
+        pins.digitalWritePin(DigitalPin.P0, 0);
+        // basic.showNumber(0);
     }
 
 
