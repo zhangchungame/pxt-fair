@@ -95,7 +95,7 @@ namespace BH1750 {
     }
 
 
-    //% weight=93 blockId=onGetNumber block="on getNumber|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
+    //% weight=93 blockId=onGetNumber block="on getNumber"
     export function onStartbit_getAngle( body: Action) {
         control.onEvent(MESSAGE_KEY, a, body);
     }
