@@ -28,14 +28,14 @@ namespace BH1750 {
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
-    export function LED1(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): void {
+    export function LED1(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin,body: Action): void {
 
         pins.digitalWritePin(pin, value);
 
     }
 
     //% weight=93 blockId=onStartbit_getAngle block="on Startbit|%servo|get angle"
-    export function onStartbit_getAngle( body: Action) {
+    export function onStartbit_getAngle( pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin,body: Action) {
         // control.onEvent(MESSAGE_ANGLE, servo, body);
     }
 
