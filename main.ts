@@ -17,6 +17,7 @@ namespace BH1750 {
     }
     let MESSAGE_KEY = 0x100;
     let a=0;
+    let arg=0;
     export enum enLED1 {
 
         //% blockId="OFF" block="灭"
@@ -30,6 +31,14 @@ namespace BH1750 {
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
     export function initializeKeyboard(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): void {
+        pins.digitalWritePin(pin,0);
+        pins.digitalWritePin(pin2,0);
+        pins.digitalWritePin(pin3,0);
+        pins.digitalWritePin(pin4,0);
+        pins.digitalWritePin(pin5,0);
+        pins.digitalWritePin(pin6,0);
+        pins.digitalWritePin(pin7,0);
+        pins.digitalWritePin(pin8,0);
         basic.forever(() => {
             pins.digitalWritePin(pin, 1)
             if(pins.digitalReadPin(pin5)==1){
@@ -107,12 +116,12 @@ namespace BH1750 {
     export function initializeKeyboard2(){
         control.raiseEvent(MESSAGE_KEY, 16);
     }
-    //% blockId=BH1750_LED3 block="发消息4"
+    //% blockId=BH1750_LED3 block="发消息5"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
     export function initializeKeyboard3(){
-        control.raiseEvent(MESSAGE_KEY);
+        control.raiseEvent(MESSAGE_KEY, 15);
     }
     /**
      * Event handlers can have arguments too. You can refer to them using $NAME.
@@ -122,6 +131,83 @@ namespace BH1750 {
     //% draggableParameters
     export function onEventWithHandlerArgs(handler: (handlerArg: string) => void) {
 
+    }
+    //% blockId=BH1750_getArg block="获取变量|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
+    //% weight=5
+    //% blockGap=8
+    //% color="#C814B8"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
+    export function getArg(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): void {
+        pins.digitalWritePin(pin,0);
+        pins.digitalWritePin(pin2,0);
+        pins.digitalWritePin(pin3,0);
+        pins.digitalWritePin(pin4,0);
+        pins.digitalWritePin(pin5,0);
+        pins.digitalWritePin(pin6,0);
+        pins.digitalWritePin(pin7,0);
+        pins.digitalWritePin(pin8,0);
+        basic.forever(() => {
+            pins.digitalWritePin(pin, 1)
+            if(pins.digitalReadPin(pin5)==1){
+                return 1;
+            }
+            if(pins.digitalReadPin(pin6)==1){
+                return 2;
+            }
+            if(pins.digitalReadPin(pin7)==1){
+                return 3;
+            }
+            if(pins.digitalReadPin(pin8)==1){
+                return 4;
+            }
+            pins.digitalWritePin(pin, 0)
+
+            pins.digitalWritePin(pin2, 1)
+            if(pins.digitalReadPin(pin5)==1){
+                return 5;
+            }
+            if(pins.digitalReadPin(pin6)==1){
+                return 6;
+            }
+            if(pins.digitalReadPin(pin7)==1){
+                return 7;
+            }
+            if(pins.digitalReadPin(pin8)==1){
+                return 8;
+            }
+            pins.digitalWritePin(pin2, 0)
+
+
+            pins.digitalWritePin(pin3, 1)
+            if(pins.digitalReadPin(pin5)==1){
+                return 9;
+            }
+            if(pins.digitalReadPin(pin6)==1){
+                return 10;
+            }
+            if(pins.digitalReadPin(pin7)==1){
+                return 11;
+            }
+            if(pins.digitalReadPin(pin8)==1){
+                return 12;
+            }
+            pins.digitalWritePin(pin3, 0)
+
+            pins.digitalWritePin(pin4, 1)
+            if(pins.digitalReadPin(pin5)==1){
+                return 13;
+            }
+            if(pins.digitalReadPin(pin6)==1){
+                return 14;
+            }
+            if(pins.digitalReadPin(pin7)==1){
+                return 15;
+            }
+            if(pins.digitalReadPin(pin8)==1){
+                return 16;
+            }
+            pins.digitalWritePin(pin4, 0)
+        });
     }
 }
  
