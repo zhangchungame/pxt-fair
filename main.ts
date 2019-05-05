@@ -34,7 +34,7 @@ namespace BH1750 {
 
     }
 
-    //% weight=93 blockId=onStartbit_getAngle block="on Startbit|%servo|get angle"
+    //% weight=93 blockId=onGetNumber block="on getNumber|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
     export function onStartbit_getAngle( pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin,body: Action) {
         // control.onEvent(MESSAGE_ANGLE, servo, body);
     }
