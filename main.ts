@@ -107,7 +107,7 @@ namespace BH1750 {
     export function initializeKeyboard2(){
         control.raiseEvent(MESSAGE_KEY, 16);
     }
-    //% blockId=BH1750_LED3 block="发消息3"
+    //% blockId=BH1750_LED3 block="发消息4"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
