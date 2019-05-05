@@ -208,5 +208,15 @@ namespace BH1750 {
         pins.digitalWritePin(pin4, 0);
         return 0;
     }
+
+    //% blockId=BH1750_geag block="因角质|pin %pin"
+    //% weight=5
+    //% blockGap=8
+    //% color="#C814B8"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
+    export function getAsrg(pin: DigitalPin): number {
+
+        return pins.digitalReadPin(pin);
+    }
 }
  
