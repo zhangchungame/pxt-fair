@@ -100,7 +100,7 @@ namespace BH1750 {
         // control.onEvent(<number>button, <number>event, handler);
         control.onEvent(MESSAGE_KEY, 16, body);
     }
-    //% blockId=BH1750_LED1 block="发消息"
+    //% blockId=BH1750_LED2 block="发消息"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
