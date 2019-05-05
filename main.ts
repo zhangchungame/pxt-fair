@@ -112,7 +112,7 @@ namespace BH1750 {
     //% blockGap=8
     //% color="#C814B8"
     export function initializeKeyboard3(){
-        control.raiseEvent(MESSAGE_KEY, 15);
+        control.raiseEvent(MESSAGE_KEY);
     }
     /**
      * Event handlers can have arguments too. You can refer to them using $NAME.
