@@ -132,12 +132,20 @@ namespace BH1750 {
     export function onEventWithHandlerArgs(handler: (handlerArg: string) => void) {
 
     }
+    //% blockId=mbit_ultrasonic_car block="ultrasonic return distance(cm)"
+    //% color="#006400"
+    //% weight=98
+    //% blockGap=10
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    export function Ultrasonic_Car(): number {
+
+    }
     //% blockId=BH1750_getArg block="获取变量|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
-    export function getArg(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): number {
+    export function getArg(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): void {
         pins.digitalWritePin(pin,0);
         pins.digitalWritePin(pin2,0);
         pins.digitalWritePin(pin3,0);
