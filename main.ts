@@ -146,6 +146,14 @@ namespace BH1750 {
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
     export function getArg(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): number {
+        pins.digitalWritePin(pin,0);
+        pins.digitalWritePin(pin2,0);
+        pins.digitalWritePin(pin3,0);
+        pins.digitalWritePin(pin4,0);
+        pins.digitalWritePin(pin5,0);
+        pins.digitalWritePin(pin6,0);
+        pins.digitalWritePin(pin7,0);
+        pins.digitalWritePin(pin8,0);
         if(pins.digitalReadPin(pin5)==1){
             return 1;
         }
