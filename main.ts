@@ -34,6 +34,11 @@ namespace BH1750 {
 
     }
 
+    //% weight=93 blockId=onStartbit_getAngle block="on Startbit|%servo|get angle"
+    export function onStartbit_getAngle( body: Action) {
+        // control.onEvent(MESSAGE_ANGLE, servo, body);
+    }
+
 
 }
  
