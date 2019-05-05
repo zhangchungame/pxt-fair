@@ -28,7 +28,7 @@ namespace BH1750 {
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
-    export function LED1(pin: DigitalPin, value: enLED1): void {
+    export function LED1(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): void {
 
         pins.digitalWritePin(pin, value);
 
