@@ -159,6 +159,7 @@ namespace BH1750 {
         if(pins.digitalReadPin(pin8)==1){
             return 4;
         }
+        return 0;
     }
 
     //% blockId=BH1750_geag block="因角质|pin %pin"
