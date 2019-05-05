@@ -3,7 +3,7 @@
   "dependencies": {
     "core": "*"
   },
-  "description": "micro:bit extension from dandinglong",
+  "description": "micro:bit extension from dandinglong v1",
   "files": [
     "main.ts"
   ]
