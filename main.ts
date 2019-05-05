@@ -159,54 +159,6 @@ namespace BH1750 {
         if(pins.digitalReadPin(pin8)==1){
             return 4;
         }
-        pins.digitalWritePin(pin, 0);
-
-        pins.digitalWritePin(pin2, 1);
-        if(pins.digitalReadPin(pin5)==1){
-            return 5;
-        }
-        if(pins.digitalReadPin(pin6)==1){
-            return 6;
-        }
-        if(pins.digitalReadPin(pin7)==1){
-            return 7;
-        }
-        if(pins.digitalReadPin(pin8)==1){
-            return 8;
-        }
-        pins.digitalWritePin(pin2, 0);
-
-
-        pins.digitalWritePin(pin3, 1);
-        if(pins.digitalReadPin(pin5)==1){
-            return 9;
-        }
-        if(pins.digitalReadPin(pin6)==1){
-            return 10;
-        }
-        if(pins.digitalReadPin(pin7)==1){
-            return 11;
-        }
-        if(pins.digitalReadPin(pin8)==1){
-            return 12;
-        }
-        pins.digitalWritePin(pin3, 0);
-
-        pins.digitalWritePin(pin4, 1);
-        if(pins.digitalReadPin(pin5)==1){
-            return 13;
-        }
-        if(pins.digitalReadPin(pin6)==1){
-            return 14;
-        }
-        if(pins.digitalReadPin(pin7)==1){
-            return 15;
-        }
-        if(pins.digitalReadPin(pin8)==1){
-            return 16;
-        }
-        pins.digitalWritePin(pin4, 0);
-        return 0;
     }
 
     //% blockId=BH1750_geag block="因角质|pin %pin"
