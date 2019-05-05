@@ -138,7 +138,7 @@ namespace BH1750 {
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Ultrasonic_Car(): number {
-
+        return 1;
     }
     //% blockId=BH1750_getArg block="获取变量|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
     //% weight=5
