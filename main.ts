@@ -4,7 +4,7 @@
  * http://www.micropython.org.cn
  */
 
-
+//% color="#006400" weight=20 icon="\uf1b9"
 namespace BH1750 {
     /**
      * 设置 BH1750 传感器的地址，默认是 35
