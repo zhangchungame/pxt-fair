@@ -15,7 +15,8 @@ namespace BH1750 {
     export function SetAddress(addr: number): void {
         addr=1;
     }
-
+    let MESSAGE_KEY = 0x100;
+    let a=0;
     export enum enLED1 {
 
         //% blockId="OFF" block="灭"
@@ -32,62 +33,62 @@ namespace BH1750 {
         basic.forever(() => {
             pins.digitalWritePin(pin, 1)
             if(pins.digitalReadPin(pin5)==1){
-                basic.showNumber(1)
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
-                basic.showNumber(2)
+                control.raiseEvent(MESSAGE_KEY, 2);
             }
             if(pins.digitalReadPin(pin7)==1){
-                basic.showNumber(3)
+                control.raiseEvent(MESSAGE_KEY, 3);
             }
             if(pins.digitalReadPin(pin8)==1){
-                basic.showNumber(4)
+                control.raiseEvent(MESSAGE_KEY, 4);
             }
             pins.digitalWritePin(pin, 0)
 
             pins.digitalWritePin(pin2, 1)
             if(pins.digitalReadPin(pin5)==1){
-                basic.showNumber(5)
+                control.raiseEvent(MESSAGE_KEY, 5);
             }
             if(pins.digitalReadPin(pin6)==1){
-                basic.showNumber(6)
+                control.raiseEvent(MESSAGE_KEY, 6);
             }
             if(pins.digitalReadPin(pin7)==1){
-                basic.showNumber(7)
+                control.raiseEvent(MESSAGE_KEY, 7);
             }
             if(pins.digitalReadPin(pin8)==1){
-                basic.showNumber(8)
+                control.raiseEvent(MESSAGE_KEY, 8);
             }
             pins.digitalWritePin(pin2, 0)
 
 
             pins.digitalWritePin(pin3, 1)
             if(pins.digitalReadPin(pin5)==1){
-                basic.showNumber(9)
+                control.raiseEvent(MESSAGE_KEY, 9);
             }
             if(pins.digitalReadPin(pin6)==1){
-                basic.showNumber(10)
+                control.raiseEvent(MESSAGE_KEY, 10);
             }
             if(pins.digitalReadPin(pin7)==1){
-                basic.showNumber(11)
+                control.raiseEvent(MESSAGE_KEY, 11);
             }
             if(pins.digitalReadPin(pin8)==1){
-                basic.showNumber(12)
+                control.raiseEvent(MESSAGE_KEY, 12);
             }
             pins.digitalWritePin(pin3, 0)
 
             pins.digitalWritePin(pin4, 1)
             if(pins.digitalReadPin(pin5)==1){
-                basic.showNumber(13)
+                control.raiseEvent(MESSAGE_KEY, 13);
             }
             if(pins.digitalReadPin(pin6)==1){
-                basic.showNumber(14)
+                control.raiseEvent(MESSAGE_KEY, 14);
             }
             if(pins.digitalReadPin(pin7)==1){
-                basic.showNumber(15)
+                control.raiseEvent(MESSAGE_KEY, 15);
             }
             if(pins.digitalReadPin(pin8)==1){
-                basic.showNumber(16)
+                control.raiseEvent(MESSAGE_KEY, 16);
             }
             pins.digitalWritePin(pin4, 0)
         });
@@ -95,8 +96,10 @@ namespace BH1750 {
 
 
     //% weight=93 blockId=onGetNumber block="on getNumber|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
-    export function onStartbit_getAngle( pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin,body: Action) {
-        // control.onEvent(MESSAGE_ANGLE, servo, body);
+    export function onStartbit_getAngle( body: Action) {
+        control.onEvent(MESSAGE_KEY, a, body);
+        basic.showNumber(0);
+        basic.showNumber(a);
     }
 
 
