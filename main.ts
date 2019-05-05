@@ -107,6 +107,13 @@ namespace BH1750 {
     export function initializeKeyboard2(){
         control.raiseEvent(MESSAGE_KEY, 16);
     }
+    //% blockId=BH1750_LED3 block="发消息3"
+    //% weight=5
+    //% blockGap=8
+    //% color="#C814B8"
+    export function initializeKeyboard3(){
+        control.raiseEvent(MESSAGE_KEY, 15);
+    }
     /**
      * Event handlers can have arguments too. You can refer to them using $NAME.
      */
