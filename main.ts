@@ -104,7 +104,7 @@ namespace BH1750 {
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
-    export function initializeKeyboard(){
+    export function initializeKeyboard2(){
         control.raiseEvent(MESSAGE_KEY, 16);
     }
 
