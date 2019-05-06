@@ -25,18 +25,30 @@ namespace keyboard44 {
             pins.digitalWritePin(pin8,0);
             pins.digitalWritePin(pin, 1);
             if(pins.digitalReadPin(pin5)==1){
+                while(pins.digitalReadPin(pin5)==1){
+                    basic.pause(10);
+                }
                 pressStr="1";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
+                while(pins.digitalReadPin(pin6)==1){
+                    basic.pause(10);
+                }
                 pressStr="2";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
+                while(pins.digitalReadPin(pin7)==1){
+                    basic.pause(10);
+                }
                 pressStr="3";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
+                while(pins.digitalReadPin(pin8)==1){
+                    basic.pause(10);
+                }
                 pressStr="A";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
@@ -51,14 +63,23 @@ namespace keyboard44 {
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
+                while(pins.digitalReadPin(pin6)==1){
+                    basic.pause(10);
+                }
                 pressStr="5";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
+                while(pins.digitalReadPin(pin7)==1){
+                    basic.pause(10);
+                }
                 pressStr="6";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
+                while(pins.digitalReadPin(pin8)==1){
+                    basic.pause(10);
+                }
                 pressStr="B";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
@@ -67,18 +88,30 @@ namespace keyboard44 {
 
             pins.digitalWritePin(pin3, 1)
             if(pins.digitalReadPin(pin5)==1){
+                while(pins.digitalReadPin(pin5)==1){
+                    basic.pause(10);
+                }
                 pressStr="7";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
+                while(pins.digitalReadPin(pin6)==1){
+                    basic.pause(10);
+                }
                 pressStr="8";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
+                while(pins.digitalReadPin(pin7)==1){
+                    basic.pause(10);
+                }
                 pressStr="9";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
+                while(pins.digitalReadPin(pin8)==1){
+                    basic.pause(10);
+                }
                 pressStr="C";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
@@ -86,23 +119,34 @@ namespace keyboard44 {
 
             pins.digitalWritePin(pin4, 1);
             if(pins.digitalReadPin(pin5)==1){
+                while(pins.digitalReadPin(pin5)==1){
+                    basic.pause(10);
+                }
                 pressStr="*";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
+                while(pins.digitalReadPin(pin6)==1){
+                    basic.pause(10);
+                }
                 pressStr="0";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
+                while(pins.digitalReadPin(pin7)==1){
+                    basic.pause(10);
+                }
                 pressStr="#";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
+                while(pins.digitalReadPin(pin8)==1){
+                    basic.pause(10);
+                }
                 pressStr="D";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             pins.digitalWritePin(pin4, 0)
-            basic.pause(100);
         });
     }
 
