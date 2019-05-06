@@ -183,6 +183,16 @@ namespace keyboard44 {
         return 0;
     }
 
-
+    /**
+     * Registers code to run when the radio receives a number.
+     */
+    //% help=radio/on-received-number
+    //% blockId=radio_on_number_drag block="on radio received" blockGap=16
+    //% useLoc="radio.onDataPacketReceived" draggableParameters=reporter
+    export function onReceivedNumber(cb: (receivedNumber2: number) => void) {
+        control.onEvent(MESSAGE_KEY, 16, () => {
+            cb(2);
+        });
+    }
 }
  
