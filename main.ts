@@ -125,7 +125,13 @@ namespace keyboard44 {
         // control.onEvent(<number>button, <number>event, handler);
         control.onEvent(MESSAGE_KEY, 16, body);
     }
-
+    /**
+     * A simple event taking an function handler
+     */
+    //% block="on event"
+    export function onEvent(handler: () => void) {
+        control.onEvent(MESSAGE_KEY, 16, body);
+    }
 
     //% blockId=BH1750_getArg block="获取变量6|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
