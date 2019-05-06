@@ -5,7 +5,7 @@
  */
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace BH1750 {
+namespace keyboard44 {
     /**
      * 设置 BH1750 传感器的地址，默认是 35
      * @param is I2C address, eg: 35
@@ -125,37 +125,8 @@ namespace BH1750 {
         // control.onEvent(<number>button, <number>event, handler);
         control.onEvent(MESSAGE_KEY, 16, body);
     }
-    //% blockId=BH1750_LED2 block="发消息"
-    //% weight=5
-    //% blockGap=8
-    //% color="#C814B8"
-    export function initializeKeyboard2(){
-        control.raiseEvent(MESSAGE_KEY, 16);
-    }
-    //% blockId=BH1750_LED3 block="发消息5"
-    //% weight=5
-    //% blockGap=8
-    //% color="#C814B8"
-    export function initializeKeyboard3(){
-        control.raiseEvent(MESSAGE_KEY, 15);
-    }
-    /**
-     * Event handlers can have arguments too. You can refer to them using $NAME.
-     */
 
-    //% block="on rare $handlerArg1 event"
-    //% draggableParameters
-    export function onEventWithHandlerArgs(handler: (handlerArg: string) => void) {
-        control.raiseEvent(MESSAGE_KEY, 16);
-    }
-    //% blockId=mbit_ultrasonic_car block="ultrasonic return distance(cm)"
-    //% color="#006400"
-    //% weight=98
-    //% blockGap=10
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function Ultrasonic_Car(): number {
-        return 1;
-    }
+
     //% blockId=BH1750_getArg block="获取变量6|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
     //% blockGap=8
@@ -235,14 +206,6 @@ namespace BH1750 {
         return 0;
     }
 
-    //% blockId=BH1750_geag block="因角质|pin %pin"
-    //% weight=5
-    //% blockGap=8
-    //% color="#C814B8"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
-    export function getAsrg(pin: DigitalPin): number {
 
-        return pins.digitalReadPin(pin);
-    }
 }
  
