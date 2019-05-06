@@ -6,24 +6,7 @@
 
 //% color="#006400" weight=20 icon="\uf1b9"
 namespace keyboard44 {
-    /**
-     * 设置 BH1750 传感器的地址，默认是 35
-     * @param is I2C address, eg: 35
-     */
-    //% blockId="BH1750_SET_ADDRESS" block="设置地址 %addr"
-    //% weight=100 blockGap=8
-    export function SetAddress(addr: number): void {
-        addr=1;
-    }
     let MESSAGE_KEY = 0x100;
-    let a=0;
-    export enum enLED1 {
-
-        //% blockId="OFF" block="灭"
-        OFF = 0,
-        //% blockId="ON" block="亮"
-        ON =1
-    }
     //% blockId=BH1750_LED1 block="初始化|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
     //% blockGap=8
