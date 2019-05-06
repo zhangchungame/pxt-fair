@@ -147,7 +147,67 @@ namespace BH1750 {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
     export function getArg(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): number {
         // pins.digitalWritePin(pin,1);
-        return pins.digitalReadPin(pin5);
+        pins.digitalWritePin(pin, 1)
+        if(pins.digitalReadPin(pin5)==1){
+            return 1;
+        }
+        if(pins.digitalReadPin(pin6)==1){
+            return 2;
+        }
+        if(pins.digitalReadPin(pin7)==1){
+            return 3;
+        }
+        if(pins.digitalReadPin(pin8)==1){
+            return 4;
+        }
+        pins.digitalWritePin(pin, 0)
+
+        pins.digitalWritePin(pin2, 1)
+        if(pins.digitalReadPin(pin5)==1){
+            return 5;
+        }
+        if(pins.digitalReadPin(pin6)==1){
+            return 6;
+        }
+        if(pins.digitalReadPin(pin7)==1){
+            return 7;
+        }
+        if(pins.digitalReadPin(pin8)==1){
+            return 8;
+        }
+        pins.digitalWritePin(pin2, 0)
+
+
+        pins.digitalWritePin(pin3, 1)
+        if(pins.digitalReadPin(pin5)==1){
+            return 9;
+        }
+        if(pins.digitalReadPin(pin6)==1){
+            return 10;
+        }
+        if(pins.digitalReadPin(pin7)==1){
+            return 11;
+        }
+        if(pins.digitalReadPin(pin8)==1){
+            return 12;
+        }
+        pins.digitalWritePin(pin3, 0)
+
+        pins.digitalWritePin(pin4, 1)
+        if(pins.digitalReadPin(pin5)==1){
+            return 13;
+        }
+        if(pins.digitalReadPin(pin6)==1){
+            return 14;
+        }
+        if(pins.digitalReadPin(pin7)==1){
+            return 15;
+        }
+        if(pins.digitalReadPin(pin8)==1){
+            return 16;
+        }
+        pins.digitalWritePin(pin4, 0)
+        return 0;
     }
 
     //% blockId=BH1750_geag block="因角质|pin %pin"
