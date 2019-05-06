@@ -17,7 +17,7 @@ namespace keyboard44 {
     }
     let MESSAGE_KEY = 0x100;
     let a=0;
-    let pressStr="";
+    export let pressStr="";
     export enum enLED1 {
 
         //% blockId="OFF" block="灭"
