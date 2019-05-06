@@ -7,7 +7,7 @@
 //% color="#006400" weight=20 icon="\uf1b9"
 namespace keyboard44 {
     let MESSAGE_KEY = 0x100;
-    //% blockId=BH1750_LED1 block="初始化|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
+    //% blockId=keyboard44_LED1 block="初始化|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
@@ -103,7 +103,7 @@ namespace keyboard44 {
 
 
 
-    //% blockId=BH1750_getArg block="获取变量6|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
+    //% blockId=keyboard44_getArg block="获取变量6|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
