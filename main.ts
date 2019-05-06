@@ -146,7 +146,7 @@ namespace BH1750 {
     //% block="on rare $handlerArg1 event"
     //% draggableParameters
     export function onEventWithHandlerArgs(handler: (pressStr: string) => void) {
-        control.raiseEvent(MESSAGE_KEY, 16);
+        control.raiseEvent(MESSAGE_KEY, 1);
     }
     //% blockId=mbit_ultrasonic_car block="ultrasonic return distance(cm)"
     //% color="#006400"
