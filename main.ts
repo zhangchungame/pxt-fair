@@ -189,7 +189,7 @@ namespace keyboard44 {
     //% help=radio/on-received-number
     //% blockId=radio_on_number_drag block="on radio received" blockGap=16
     //% useLoc="radio.onDataPacketReceived" draggableParameters=reporter
-    export function onReceivedNumber(cb: (receivedNumber2: string) => void) {
+    export function onReceivedNumber(cb: (pressString: string) => void) {
         control.onEvent(MESSAGE_KEY, 1, () => {
             cb(pressStr);
         });
