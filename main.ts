@@ -17,7 +17,6 @@ namespace keyboard44 {
     }
     let MESSAGE_KEY = 0x100;
     let a=0;
-    export let pressStr="";
     export enum enLED1 {
 
         //% blockId="OFF" block="灭"
@@ -201,11 +200,6 @@ namespace keyboard44 {
     }
 
 
-    //% weight=93 blockId=onGetNumber block="获取按键值 "
-    export function onStartbit_getAngle(body: Action) {
-        // control.onEvent(<number>button, <number>event, handler);
-        control.onEvent(MESSAGE_KEY, 16, body);
-    }
     /**
      * Registers code to run when the radio receives a number.
      */
