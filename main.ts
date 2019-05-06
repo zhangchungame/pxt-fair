@@ -120,10 +120,10 @@ namespace BH1750 {
     }
 
 
-    //% weight=93 blockId=onGetNumber block="on getNumber"
-    export function onStartbit_getAngle( body: Action) {
+    //% weight=93 blockId=onGetNumber block="获取按键值 %pressNum"
+    export function onStartbit_getAngle( pressNum:string ,body: Action) {
         // control.onEvent(<number>button, <number>event, handler);
-        control.onEvent(MESSAGE_KEY, 1, body);
+        control.onEvent(MESSAGE_KEY, 16, body);
     }
     //% blockId=BH1750_LED2 block="发消息"
     //% weight=5
@@ -143,10 +143,10 @@ namespace BH1750 {
      * Event handlers can have arguments too. You can refer to them using $NAME.
      */
 
-    //% block="on rare $pressStr event"
+    //% block="on rare $handlerArg1 event"
     //% draggableParameters
-    export function onEventWithHandlerArgs(handler: (pressStr: string) => void) {
-        control.raiseEvent(MESSAGE_KEY, 1);
+    export function onEventWithHandlerArgs(handler: (handlerArg: string) => void) {
+        control.raiseEvent(MESSAGE_KEY, 16);
     }
     //% blockId=mbit_ultrasonic_car block="ultrasonic return distance(cm)"
     //% color="#006400"
