@@ -44,8 +44,10 @@ namespace keyboard44 {
 
             pins.digitalWritePin(pin2, 1);
             if(pins.digitalReadPin(pin5)==1){
-                pressStr="4";
-                control.raiseEvent(MESSAGE_KEY, 1);
+                while(pins.digitalReadPin(pin5)==0){
+                    pressStr="4";
+                    control.raiseEvent(MESSAGE_KEY, 1);
+                }
             }
             if(pins.digitalReadPin(pin6)==1){
                 pressStr="5";
