@@ -194,5 +194,9 @@ namespace keyboard44 {
             cb(2);
         });
     }
+    //%blockId=send_message
+    export function sendMessage(){
+        control.raiseEvent(MESSAGE_KEY, 16);
+    }
 }
  
