@@ -140,7 +140,7 @@ namespace BH1750 {
     export function Ultrasonic_Car(): number {
         return 1;
     }
-    //% blockId=BH1750_getArg block="获取变量6|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
+    //% blockId=BH1750_getArg block="获取变量6|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
