@@ -143,7 +143,7 @@ namespace BH1750 {
      * Event handlers can have arguments too. You can refer to them using $NAME.
      */
 
-    //% block="on rare $handlerArg1 event"
+    //% block="on rare $pressStr event"
     //% draggableParameters
     export function onEventWithHandlerArgs(handler: (pressStr: string) => void) {
         control.raiseEvent(MESSAGE_KEY, 1);
