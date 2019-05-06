@@ -17,7 +17,7 @@ namespace BH1750 {
     }
     let MESSAGE_KEY = 0x100;
     let a=0;
-    let arg=0;
+    let pressStr="";
     export enum enLED1 {
 
         //% blockId="OFF" block="灭"
@@ -25,79 +25,95 @@ namespace BH1750 {
         //% blockId="ON" block="亮"
         ON =1
     }
-    //% blockId=BH1750_LED1 block="初始化|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
+    //% blockId=BH1750_LED1 block="初始化|pin %pin|pin2 %pin2|pin3 %pin3|pin4 %pin4|pin5 %pin5|pin6 %pin6|pin7 %pin7|pin8 %pin8"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
     export function initializeKeyboard(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): void {
-        pins.digitalWritePin(pin,0);
-        pins.digitalWritePin(pin2,0);
-        pins.digitalWritePin(pin3,0);
-        pins.digitalWritePin(pin4,0);
-        pins.digitalWritePin(pin5,0);
-        pins.digitalWritePin(pin6,0);
-        pins.digitalWritePin(pin7,0);
-        pins.digitalWritePin(pin8,0);
         basic.forever(() => {
-            pins.digitalWritePin(pin, 1)
+            pins.digitalWritePin(pin,0);
+            pins.digitalWritePin(pin2,0);
+            pins.digitalWritePin(pin3,0);
+            pins.digitalWritePin(pin4,0);
+            pins.digitalWritePin(pin5,0);
+            pins.digitalWritePin(pin6,0);
+            pins.digitalWritePin(pin7,0);
+            pins.digitalWritePin(pin8,0);
+            pins.digitalWritePin(pin, 1);
             if(pins.digitalReadPin(pin5)==1){
+                pressStr="1";
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
-                control.raiseEvent(MESSAGE_KEY, 2);
+                pressStr="2";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
-                control.raiseEvent(MESSAGE_KEY, 3);
+                pressStr="3";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
-                control.raiseEvent(MESSAGE_KEY, 4);
+                pressStr="A";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
-            pins.digitalWritePin(pin, 0)
+            pins.digitalWritePin(pin, 0);
 
-            pins.digitalWritePin(pin2, 1)
+            pins.digitalWritePin(pin2, 1);
             if(pins.digitalReadPin(pin5)==1){
-                control.raiseEvent(MESSAGE_KEY, 5);
+                pressStr="4";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
-                control.raiseEvent(MESSAGE_KEY, 6);
+                pressStr="5";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
-                control.raiseEvent(MESSAGE_KEY, 7);
+                pressStr="6";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
-                control.raiseEvent(MESSAGE_KEY, 8);
+                pressStr="B";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
-            pins.digitalWritePin(pin2, 0)
+            pins.digitalWritePin(pin2, 0);
 
 
             pins.digitalWritePin(pin3, 1)
             if(pins.digitalReadPin(pin5)==1){
-                control.raiseEvent(MESSAGE_KEY, 9);
+                pressStr="7";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
-                control.raiseEvent(MESSAGE_KEY, 10);
+                pressStr="8";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
-                control.raiseEvent(MESSAGE_KEY, 11);
+                pressStr="9";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
-                control.raiseEvent(MESSAGE_KEY, 12);
+                pressStr="C";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
-            pins.digitalWritePin(pin3, 0)
+            pins.digitalWritePin(pin3, 0);
 
-            pins.digitalWritePin(pin4, 1)
+            pins.digitalWritePin(pin4, 1);
             if(pins.digitalReadPin(pin5)==1){
-                control.raiseEvent(MESSAGE_KEY, 13);
+                pressStr="*";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin6)==1){
-                control.raiseEvent(MESSAGE_KEY, 14);
+                pressStr="0";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin7)==1){
-                control.raiseEvent(MESSAGE_KEY, 15);
+                pressStr="#";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             if(pins.digitalReadPin(pin8)==1){
-                control.raiseEvent(MESSAGE_KEY, 16);
+                pressStr="D";
+                control.raiseEvent(MESSAGE_KEY, 1);
             }
             pins.digitalWritePin(pin4, 0)
         });
@@ -129,8 +145,8 @@ namespace BH1750 {
 
     //% block="on rare $handlerArg1 event"
     //% draggableParameters
-    export function onEventWithHandlerArgs(handler: (handlerArg: string) => void) {
-
+    export function onEventWithHandlerArgs(handler: (pressStr: string) => void) {
+        control.raiseEvent(MESSAGE_KEY, 16);
     }
     //% blockId=mbit_ultrasonic_car block="ultrasonic return distance(cm)"
     //% color="#006400"
