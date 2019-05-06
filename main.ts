@@ -123,7 +123,7 @@ namespace BH1750 {
     //% weight=93 blockId=onGetNumber block="on getNumber"
     export function onStartbit_getAngle( body: Action) {
         // control.onEvent(<number>button, <number>event, handler);
-        control.onEvent(MESSAGE_KEY, 16, body);
+        control.onEvent(MESSAGE_KEY, 1, body);
     }
     //% blockId=BH1750_LED2 block="发消息"
     //% weight=5
