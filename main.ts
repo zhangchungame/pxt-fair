@@ -201,12 +201,21 @@ namespace keyboard44 {
     }
 
 
-    /**
-     * A simple event taking an function handler
-     */
-    //% block="on event"
-    export function onEvent(handler: () => void) {
+    //% weight=93 blockId=onGetNumber block="获取按键值 "
+    export function onStartbit_getAngle(body: Action) {
+        // control.onEvent(<number>button, <number>event, handler);
         control.onEvent(MESSAGE_KEY, 16, body);
+    }
+    /**
+     * Registers code to run when the radio receives a number.
+     */
+    //% help=radio/on-received-number
+    //% blockId=radio_on_number_drag2 block="on radio received" blockGap=16
+    //% useLoc="radio.onDataPacketReceived" draggableParameters=reporter
+    export function onReceivedNumber(cb: (receivedNumber: number) => void) {
+        control.onEvent(MESSAGE_KEY, 16, () => {
+            cb(1);
+        });
     }
 }
  
