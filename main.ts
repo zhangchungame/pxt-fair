@@ -120,8 +120,8 @@ namespace keyboard44 {
     }
 
 
-    //% weight=93 blockId=onGetNumber block="获取按键值 $pressStr"
-    export function onStartbit_getAngle(pressStr: string,body: Action) {
+    //% weight=93 blockId=onGetNumber block="获取按键值 "
+    export function onStartbit_getAngle(body: Action) {
         // control.onEvent(<number>button, <number>event, handler);
         control.onEvent(MESSAGE_KEY, 16, body);
     }
