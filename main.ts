@@ -120,8 +120,8 @@ namespace BH1750 {
     }
 
 
-    //% weight=93 blockId=onGetNumber block="获取按键值 %pressNum"
-    export function onStartbit_getAngle( pressNum:string ,body: Action) {
+    //% weight=93 blockId=onGetNumber block="获取按键值 %pressNum2"
+    export function onStartbit_getAngle( pressNum2:string ,body: Action) {
         // control.onEvent(<number>button, <number>event, handler);
         control.onEvent(MESSAGE_KEY, 16, body);
     }
