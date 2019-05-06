@@ -140,26 +140,14 @@ namespace BH1750 {
     export function Ultrasonic_Car(): number {
         return 1;
     }
-    //% blockId=BH1750_getArg block="获取变量3|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
+    //% blockId=BH1750_getArg block="获取变量4|pin %pin|pin2 %pin|pin3 %pin|pin4 %pin|pin5 %pin|pin6 %pin|pin7 %pin|pin8 %pin"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=1
     export function getArg(pin: DigitalPin,pin2: DigitalPin,pin3: DigitalPin,pin4: DigitalPin,pin5: DigitalPin,pin6: DigitalPin,pin7: DigitalPin,pin8: DigitalPin): number {
         pins.digitalWritePin(pin,1);
-        if(pins.digitalReadPin(pin5)==1){
-            return 1;
-        }
-        if(pins.digitalReadPin(pin6)==1){
-            return 2;
-        }
-        if(pins.digitalReadPin(pin7)==1){
-            return 3;
-        }
-        if(pins.digitalReadPin(pin8)==1){
-            return 4;
-        }
-        return 0;
+        return pins.digitalReadPin(pin5);
     }
 
     //% blockId=BH1750_geag block="因角质|pin %pin"
