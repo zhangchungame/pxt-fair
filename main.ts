@@ -99,6 +99,7 @@ namespace keyboard44 {
                 control.raiseEvent(MESSAGE_KEY, 1);
             }
             pins.digitalWritePin(pin4, 0)
+            basic.pause(100);
         });
     }
 
